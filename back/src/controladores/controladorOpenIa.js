@@ -4,7 +4,9 @@ const { google } = require('../../config'); // tu configuración con dotenv
 const genAI = new GoogleGenerativeAI(google.apiKey);
 
 const controladorChatOpenIA = async (req, res) => {
-  const userMessage = req.body.message || "";
+ 
+  const userMessage = req.body?.message || "";
+  
 
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });

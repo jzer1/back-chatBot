@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Rutas
-app.use('/', chatBotOpenIA);
+app.use('/api', chatBotOpenIA);
 app.use('/api', ruta);  
 
 // Configurar el puerto
